@@ -1,0 +1,13 @@
+package com.legalai;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LegalAnalyzerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(LegalAnalyzerApplication.class, args);
+    }
+
+}
