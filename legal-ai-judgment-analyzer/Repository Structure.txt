@@ -1,0 +1,28 @@
+legal-ai-judgment-analyzer
+│
+├── README.md
+├── .gitignore
+│
+├── ai-service
+│   ├── analyze.py
+│   └── requirements.txt
+│
+├── backend-springboot
+│   ├── pom.xml
+│   └── src/main
+│       ├── java/com/legalai
+│       │   ├── LegalAnalyzerApplication.java
+│       │   ├── controller/LegalController.java
+│       │   └── service/LegalService.java
+│       │
+│       └── resources
+│           └── application.properties
+│
+└── frontend-angular
+    ├── package.json
+    └── src/app
+        ├── app.module.ts
+        ├── app.component.ts
+        ├── upload/upload.component.ts
+        ├── upload/upload.component.html
+        └── services/api.service.ts
