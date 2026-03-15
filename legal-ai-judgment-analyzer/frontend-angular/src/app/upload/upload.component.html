@@ -1,0 +1,20 @@
+<h2>Legal Judgment Analyzer</h2>
+
+<input type="file" (change)="onFileSelect($event)">
+<button (click)="upload()">Analyze</button>
+
+<div *ngIf="result">
+
+<h3>Case Title</h3>
+<p>{{result.case_title}}</p>
+
+<h3>Judge</h3>
+<p>{{result.judge}}</p>
+
+<h3>Decision</h3>
+<p>{{result.decision}}</p>
+
+<h3>Summary</h3>
+<p>{{result.summary}}</p>
+
+</div>
