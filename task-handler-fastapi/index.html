@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Task App</title>
+</head>
+<body>
+  <h1>Task List</h1>
+  <input id="taskInput" placeholder="Enter task" />
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    async function loadTasks() {
+      const res = await fetch("http://localhost:8000/tasks");
+      const data = await res.json();
+      document.getElementById("taskList").innerHTML =
+        data.map(t => `<li>${t.title}</li>`).join("");
+    }
+
+    async function addTask() {
+      const title = document.getElementById("taskInput").value;
+      await fetch("http://localhost:8000/tasks?title=" + encodeURIComponent(title), {
+        method: "POST"
+      });
+      loadTasks();
+    }
+
+    loadTasks();
+  </script>
+</body>
+</html>
